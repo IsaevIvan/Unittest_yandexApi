@@ -1,11 +1,11 @@
 import requests
 
-class YandeDiskApi:
+class YandexDiskApi:
 
     def __init__(self, token):
         self.token = token
         self.base_url = "https://cloud-api.yandex.net/v1/disk/resources"
-        self.headers = {"Authorization": f"OAuth {self.token}"}
+        self.headers = {"Authorization": f'{self.token}'}
 
     def create_folder(self, path):
         url = self.base_url
